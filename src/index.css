@@ -5,8 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@import 'bootstrap/dist/css/bootstrap.min.css';*/
-
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -15,21 +13,7 @@
 :root {
     --black: #111111;
     --white: #fff;
-    --dark-gray: #5C5E6E;
-    --light-gray: #9699A8;
-    --green: #7ECA1D;
-    --light-green: #f3f8ed;
-    --middle-green: #65A217;
-    --footer-bg: #383941;
-    --footer-links: #87878c;
-    --oringe: #FF7B27;
-    --turquoise: #1dcfc6;
-    --blue: #0065BD;
-    --dark-blue: #00196f;
-    --pink: #FF6889;
-    --khaki: #768668;
-    --purple: #6D35B3;
-    --bright-red: #fd4f4f;
+    --oringe: #fd5722;
 
 }
 
@@ -65,7 +49,7 @@ a {
 }
 
 a:hover {
-    color: var(--green);
+    color: var(--oringe);
 }
 
 svg {
@@ -76,4 +60,12 @@ p {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.parallax-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
