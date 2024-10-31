@@ -4,18 +4,15 @@ import {ROUTES} from "../../config/routes";
 
 const Navbar = () => {
     return (
-        <nav className="bg-white border-gray-200 h-10vh">
+        <nav className="bg-transparent absolute top-0 left-0 right-0 z-50 flex justify-center">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <NavLink to={ROUTES.HOME} className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/logo.png" className="h-14" alt="Logo"/>
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        RBT-serwis
-                    </span>
+                    <img src="/logo.png" className="md:w-36 xs:w-20" alt="Logo"/>
                 </NavLink>
 
                 <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+                            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100">
                         <svg className="w-5 h-5 rounded-full me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                              xlinkHref="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
                             <path fill="#b22234" d="M0 0h7410v3900H0z"/>
@@ -140,12 +137,13 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
+
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
                      id="navbar-language">
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                         <li>
                             <NavLink to={ROUTES.SERVICES}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:ml-20"
                                      aria-current="page"
                             >
                                 Услуги
@@ -153,7 +151,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink to={ROUTES.PRICES}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
                                      aria-current="page"
                             >
                                 Цены
@@ -161,7 +159,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink to={ROUTES.FAQ}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
                                      aria-current="page"
                             >
                                 Часто задаваемые вопросы
@@ -169,21 +167,21 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink to={ROUTES.ABOUT_US}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
                             >
                                 О нас
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ROUTES.BLOG}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
                             >
                                 Блог
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ROUTES.ABOUT_US}
-                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-black md:p-0"
+                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:mr-20"
                             >
                                 Контакты
                             </NavLink>
