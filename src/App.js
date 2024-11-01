@@ -11,6 +11,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Prices from "./components/Prices/Prices";
 import FAQ from "./components/FAQ/FAQ";
 import Blog from "./components/Blog/Blog";
+import Contacts from "./components/Contacts/Contacts";
 
 
 const Layout = () => {
@@ -59,6 +60,10 @@ const App = () => {
                 {
                     path: ROUTES.BLOG,
                     element: <Blog/>
+                },
+                {
+                    path: ROUTES.CONTACTS,
+                    element: <Contacts/>
                 },
             ]
         },

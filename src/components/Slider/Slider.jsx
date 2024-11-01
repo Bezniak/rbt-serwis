@@ -1,14 +1,14 @@
 import React from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import {Autoplay} from 'swiper/modules';
-import {Parallax} from 'react-parallax';
-import {FaPhone} from "react-icons/fa";
-import {PiMedalLight} from "react-icons/pi";
+import { Autoplay } from 'swiper/modules';
+import { Parallax } from 'react-parallax';
+import { FaPhone } from "react-icons/fa";
+import { PiMedalLight } from "react-icons/pi";
 
 const Slider = () => {
     return (
-        <div className="w-full">
+        <div className="relative">
             <Swiper
                 spaceBetween={0}
                 centeredSlides={true}
@@ -19,58 +19,50 @@ const Slider = () => {
                 speed={2500}
                 loop={true}
                 modules={[Autoplay]}
-                className=""
+                className="h-90vh"
             >
                 <SwiperSlide>
                     <Parallax
                         bgImage='/service-repairing.jpg'
                         strength={800}
-                        bgImageStyle={{objectFit: 'cover'}}
-                        className="h-screen w-full parallax-slide"
-                    >
-                        <div className="parallax-content"></div>
-                    </Parallax>
+                        bgImageStyle={{ objectFit: 'cover' }}
+                        className="h-90vh w-full parallax-slide"
+                    />
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <Parallax
                         bgImage='/circuit-board.jpg'
                         strength={800}
-                        bgImageStyle={{objectFit: 'cover'}}
-                        className="h-screen w-full parallax-slide"
-                    >
-                        <div className="parallax-content"></div>
-                    </Parallax>
+                        bgImageStyle={{ objectFit: 'cover' }}
+                        className="h-90vh w-full parallax-slide"
+                    />
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <Parallax
                         bgImage='/service.jpg'
                         strength={800}
-                        bgImageStyle={{objectFit: 'cover'}}
-                        className="h-screen w-full parallax-slide"
-                    >
-                        <div className="parallax-content"></div>
-                    </Parallax>
+                        bgImageStyle={{ objectFit: 'cover' }}
+                        className="h-90vh w-full parallax-slide"
+                    />
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <Parallax
                         bgImage='/worker-repairing.jpg'
                         strength={800}
-                        bgImageStyle={{objectFit: 'cover'}}
-                        className="h-screen w-full parallax-slide"
-                    >
-                        <div className="parallax-content"></div>
-                    </Parallax>
+                        bgImageStyle={{ objectFit: 'cover' }}
+                        className="h-90vh w-full parallax-slide"
+                    />
                 </SwiperSlide>
             </Swiper>
 
-            <div
-                className="absolute z-50 inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+            {/* Overlay text content */}
+            <div className="absolute z-10 inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <div
                     className="flex justify-center items-center gap-3 bg-[var(--white)] text-xs py-2 px-5 rounded-2xl mb-8">
-                    <PiMedalLight className='text-[var(--oringe)] text-3xl'/>
+                    <PiMedalLight className='text-[var(--oringe)] text-3xl' />
                     <span className="font-semibold text-[var(--blue)] text-base">
                         Ваше удовлетворение — наш главный приоритет
                     </span>
@@ -94,7 +86,7 @@ const Slider = () => {
                         href="tel:+375333549000"
                         className="text-lg font-semibold flex justify-center items-center gap-3 group transition-colors duration-200"
                     >
-                        <FaPhone className='text-[var(--oringe)] text-2xl group-hover:text-[var(--yellow)] transition'/>
+                        <FaPhone className='text-[var(--oringe)] text-2xl group-hover:text-[var(--yellow)] transition' />
                         <span className="text-[var(--white)] group-hover:text-[var(--yellow)] transition">
                             +375 33 354-90-00
                         </span>

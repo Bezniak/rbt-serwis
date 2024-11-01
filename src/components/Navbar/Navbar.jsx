@@ -2,17 +2,17 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import {ROUTES} from "../../config/routes";
 
+
 const Navbar = () => {
     return (
-        <nav className="bg-transparent absolute top-0 left-0 right-0 z-50 flex justify-center">
+        <nav className="bg-white border-gray-200 h-10vh">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <NavLink to={ROUTES.HOME} className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/logo.png" className="md:w-36 xs:w-20" alt="Logo"/>
+                    <img src="/logo.png" className="w-16" alt="Logo"/>
                 </NavLink>
-
                 <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100">
+                            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
                         <svg className="w-5 h-5 rounded-full me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                              xlinkHref="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
                             <path fill="#b22234" d="M0 0h7410v3900H0z"/>
@@ -43,8 +43,6 @@ const Navbar = () => {
                         </svg>
                         English (US)
                     </button>
-
-
                     {/*Dropdown*/}
                     <div
                         className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
@@ -77,7 +75,6 @@ const Navbar = () => {
                                     </div>
                                 </NavLink>
                             </li>
-
                             <li>
                                 <a href="#"
                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -95,7 +92,6 @@ const Navbar = () => {
                                     </div>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="#"
                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -137,61 +133,77 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
-
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
                      id="navbar-language">
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
                         <li>
-                            <NavLink to={ROUTES.SERVICES}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:ml-20"
-                                     aria-current="page"
+                            <NavLink
+                                to={ROUTES.SERVICES}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
+                                aria-current="page"
                             >
                                 Услуги
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ROUTES.PRICES}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
-                                     aria-current="page"
+                            <NavLink
+                                to={ROUTES.PRICES}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
+                                aria-current="page"
                             >
                                 Цены
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ROUTES.FAQ}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
-                                     aria-current="page"
+                            <NavLink
+                                to={ROUTES.FAQ}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
+                                aria-current="page"
                             >
                                 Часто задаваемые вопросы
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ROUTES.ABOUT_US}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
+                            <NavLink
+                                to={ROUTES.ABOUT_US}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
                             >
                                 О нас
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ROUTES.BLOG}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0"
+                            <NavLink
+                                to={ROUTES.BLOG}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
                             >
                                 Блог
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ROUTES.ABOUT_US}
-                                     className="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 md:mr-20"
+                            <NavLink
+                                to={ROUTES.CONTACTS}
+                                className={({isActive}) =>
+                                    `block py-2 px-3 rounded md:p-0 ${isActive ? "text-[var(--oringe)]" : "text-black"}`
+                                }
                             >
                                 Контакты
                             </NavLink>
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
-
     );
 };
-
 export default Navbar;

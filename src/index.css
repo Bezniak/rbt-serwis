@@ -16,8 +16,6 @@
     --oringe: #fd5722;
     --blue: #3637A4;
     --yellow: #fdc652;
-    --red: #ce101a;
-    --green: #007c2c;
 
 }
 
@@ -52,9 +50,9 @@ a {
     transition: color 0.2s ease-in-out;
 }
 
-/*a:hover {*/
-/*    color: var(--oringe);*/
-/*}*/
+a:hover {
+    color: var(--oringe);
+}
 
 p {
     margin: 0;
